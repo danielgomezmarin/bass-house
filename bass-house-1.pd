@@ -1,4 +1,4 @@
-#N canvas 538 166 618 158 10;
+#N canvas 20 154 618 158 10;
 #X declare -path ../abs;
 #X obj -491 -750 hradio 50 1 0 12 key_root set-key_root empty 0 -8
 0 10 -262144 -261234 -1 0;
@@ -22,7 +22,7 @@
 #X obj -153 -690 tgl 50 0 make_new reset_seq empty 17 7 0 10 -262144
 -261234 -1 0 1;
 #X obj -286 -690 hsl 129 50 -1 1 0 0 register set-register empty -2
--8 0 10 -262144 -261234 -1 6400 1;
+-8 0 10 -262144 -261234 -1 0 1;
 #X text -270 -672 low;
 #X text -470 -673 1;
 #X text -420 -673 2;
@@ -35,13 +35,13 @@
 #X obj -47 -664 cnv 15 50 20 empty empty house 0 12 0 17 -261234 -66577
 0;
 #X obj 9 -690 hradio 50 1 0 2 key_mode set-key_mode empty 0 -8 0 10
--262144 -261234 -1 1;
+-262144 -261234 -1 0;
 #X text 74 -674 min;
 #X text 24 -674 maj;
 #X text -488 -634 THIS PATCH GENERATES MIDI OUTPUT!;
 #X text -284 -634 YOU HAVE TO CONNECT IT TO A MIDI SYNTH TO LISTEN
 ;
-#N canvas 727 318 787 719 gutssssssssss 0;
+#N canvas 721 344 787 719 gutssssssssss 0;
 #X obj -101 -471 list-wrandom;
 #X obj -74 -109 + 0;
 #X msg -74 -68 \$1 120;
@@ -60,9 +60,7 @@
 #X restore 57 -384 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
 #X array result 25 float 1;
-#A 0 0.0176991 0.00884955 0.0353982 0.0221239 0.00442478 0.0221239
-0 0.517699 0 0.0486726 0.119469 0.0132743 0.0663717 0 0.0309734 0.0221239
-0 0.0176991 0 0.039823 0 0 0.00884955 0 0.00442478;
+#A 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0;
 #X coords 0 1 24 0 200 140 1 0 0;
 #X restore 56 -384 graph;
 #X obj 127 -418 tabset result;
@@ -79,7 +77,7 @@
 #X obj -479 -650 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X text -453 -651 "bang" to retrieve ALL FILES!;
-#N canvas 711 227 659 852 extract_ground_truth 0;
+#N canvas 705 228 659 852 extract_ground_truth 0;
 #X obj -290 -77 mrpeach/midifile;
 #X msg -290 -132 read \$1;
 #X obj -290 0 route 144 145 146 147 148 149 150 151 152 153 154 155
@@ -125,7 +123,7 @@
 #X obj -408 -201 t l l;
 #X obj -381 -158 - 1;
 #X obj -160 -136 loadbang;
-#X obj -317 -314 get_files ../testfiles/midi-basslines/*.mid;
+#X obj -317 -314 get_files /midi-basslines/*.mid;
 #X connect 0 0 2 0;
 #X connect 0 2 4 0;
 #X connect 1 0 0 0;

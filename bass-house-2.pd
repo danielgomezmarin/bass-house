@@ -50711,7 +50711,7 @@ la octava principal de Do a Do (36-48).;
 -1 -1;
 #X obj 18 -1793 del 200;
 #X obj 153 -1756 del 1000;
-#X obj 9 -1685 get_files ../testfiles/midi-basslines/*.mid;
+#X obj 9 -1685 get_files /midi-basslines/*.mid;
 #X connect 0 0 37 0;
 #X connect 1 0 37 0;
 #X connect 2 0 0 0;
